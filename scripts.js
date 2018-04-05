@@ -53,3 +53,16 @@ progress.addEventListener("click", scrub);
 progress.addEventListener("mousemove", e => mousedown && scrub(e));
 progress.addEventListener("mousedown", () => (mousedown = true));
 progress.addEventListener("mouseup", () => (mousedown = false));
+
+function goFullscreen() {
+  let elem = document.getElementById("cutom_video");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { 
+    elem.msRequestFullscreen();
+  }
+}

@@ -104,6 +104,12 @@ body {
   flex-basis:50%;
 }
 
+.fullscreen-btn {
+  background: transparent;
+  border: unset;
+  color: white;
+}
+
 /* unholy css to style input type="range" */
 
 input[type=range] {
